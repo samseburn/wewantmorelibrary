@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/samseburn/wewantmorelibrary/issues"
   },
-  "homepage": "https://github.com/samseburn/wewantmorelibrary#readme"
+  "homepage": "https://github.com/samseburn/wewantmorelibrary#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0"
+  }
 }
