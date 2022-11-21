@@ -1,21 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>우리는 더 많은 도서관을 원한다</title>
-    <meta name="author" content="koseokyoung" />
-    <meta name="keywords" content="작은도서관, 도서관, 서울시" />
-    <meta name="description" content="서울시 작은도서관 현황 아카이빙" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <title>Filter Button Component</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <aside class="filter">
@@ -153,88 +143,7 @@
       </div>
     </aside>
 
-    <button type="button" class="sidebar-open-button">사이드바 열기</button>
-    <aside class="sidebar">
-      <header class="sidebar-header">
-        <h1 class="title">우리는 더 많은 도서관을 원한다</h1>
-        <p class="sidebar-description">서울시 작은 도서관 현황 아카이빙</p>
-      </header>
-
-      <!-- NOTE: 필터 버튼을 클릭한 경우 -->
-      <div class="sidebar-content">
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <h3>작은 도서관</h3>
-            <p>휴관중</p>
-            <p>주소: 서울특별시 용산구 백범로 99길 40 3층</p>
-            <p>연락처: 000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>강남 꿈나무 도서관</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>시인의 집</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>꿈꾸는 문고</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>꿈이 익어가는 작은도서관</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>송천동 새마을문고</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>작은 도서관</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>작은 도서관</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-          <li class="sidebar-item">
-            <h3>작은 도서관</h3>
-            <p>휴관중</p>
-            <p><span>주소: </span>서울특별시 용산구 백범로 99길 40 3층</p>
-            <p><span>연락처: </span>000 - 0000 - 0000</p>
-          </li>
-        </ul>
-      </div>
-
-      <!-- NOTE: 필터 버튼을 클릭하지 않은 경우 -->
-      <div class="sidebar-content">
-        <p class="placeholder">보고 싶은 구를 클릭하세요</p>
-      </div>
-    </aside>
     <script>
-      // 사이드바 토글 기능
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOpenBtn = document.querySelector('.sidebar-open-button');
-
-      sidebarOpenBtn.addEventListener('click', function () {
-        sidebar.classList.toggle('is-active');
-      });
-
-      // 필터 버튼 기능
       const filterCategoryBtns = document.querySelectorAll(
         '.filter-category-item'
       );
