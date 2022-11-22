@@ -178,59 +178,5 @@
         <p class="placeholder">보고 싶은 구를 클릭하세요</p>
       </div>
     </aside>
-
-    <script>
-      // 사이드바 토글 기능
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOpenBtn = document.querySelector('.sidebar-open-button');
-
-      sidebarOpenBtn.addEventListener('click', function () {
-        sidebar.classList.toggle('is-active');
-      });
-
-      // 필터 버튼 기능
-      const filterCategoryBtns = document.querySelectorAll(
-        '.filter-category-item'
-      );
-      const all = document.querySelector('.filter-category-item.all');
-      const guList = document.querySelector('.filter-category-item.gu-list');
-      const filterBtnList = document.querySelector('.filter-list');
-      const filterBtns = document.querySelectorAll('.filter-button');
-
-      // 전체 + 구별보기
-      filterCategoryBtns.forEach((button) => {
-        button.addEventListener('click', function (e) {
-          removeClass(filterCategoryBtns);
-          button.classList.toggle('is-active');
-        });
-      });
-
-      guList.addEventListener('click', function (e) {
-        filterBtnList.classList.toggle('is-shown');
-      });
-
-      if (
-        !guList.classList.contains('is-active') &&
-        all.classList.contains('is-active')
-      ) {
-        filterBtnList.classList.remove('is-shown');
-      }
-
-      filterBtns.forEach((button) => {
-        button.addEventListener('click', function (e) {
-          removeClass(filterBtns);
-          button.classList.toggle('is-active');
-        });
-      });
-
-      function removeClass(btns) {
-        btns.forEach((button) => {
-          console.log(button);
-          if (button.classList.contains('is-active')) {
-            button.classList.remove('is-active');
-          }
-        });
-      }
-    </script>
   </body>
 </html>
