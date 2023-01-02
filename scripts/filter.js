@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // 필터 버튼 기능
 const filterCategoryBtns = document.querySelectorAll('.filter-category-item');
 const all = document.querySelector('.all');

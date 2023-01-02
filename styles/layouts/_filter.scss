@@ -2,97 +2,71 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
+  z-index: $filter-z;
 
   &-category {
     display: flex;
     max-width: 240px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
 
-    &-item {
-      &.is-active {
-        button {
-          color: #5284a8;
-          background-color: snow;
-          border: 2px solid #5284a8;
-          font-weight: 700;
-        }
+  &-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 84px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 2px solid $fc-blue;
+    background-color: $fc-blue;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: black;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+  }
+
+  &-category-item,
+  &-item {
+    margin-right: 5px;
+  }
+
+  &-item {
+    .filter-button {
+      padding: 6px;
+      min-height: 36px;
+
+      &:hover {
+        border: 2px solid $fc-blue;
+        background-color: $white;
+        font-weight: 700;
+        color: $fc-blue;
       }
-      button {
-        margin-right: 5px;
-        display: block;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 12px;
-        font-weight: 500;
-        letter-spacing: 0.01em;
-        height: 36px;
-        border-radius: 6px;
-        background-color: #5284a8;
-        font-size: 16px;
-        color: black;
-        cursor: pointer;
-        transition: all 350ms ease-in-out;
-        border: 2px solid #5284a8;
-      }
+    }
+  }
+
+  .is-active {
+    .filter-button {
+      border: 2px solid $fc-blue;
+      background-color: $white;
+      font-weight: 700;
+      color: $fc-blue;
     }
   }
 
   &-list {
     display: none;
 
-    &.is-shown {
-      display: block;
-    }
-
-    .filter-item {
-      button {
-        margin-right: 5px;
-        display: block;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 0;
-        font-weight: 500;
-        width: 84px;
-        letter-spacing: 0.01em;
-        height: 36px;
-        border-radius: 6px;
-        background-color: #5284a8;
-        font-size: 16px;
-        color: black;
-        cursor: pointer;
-        transition: all 350ms ease-in-out;
-        border: 2px solid #5284a8;
-
-        &.is-active {
-          color: #5284a8;
-          background-color: snow;
-          border: 2px solid #5284a8;
-          font-weight: 700;
-        }
-      }
-    }
-
     ul {
       display: flex;
       position: relative;
-      min-width: 200px;
       width: 100%;
+      min-height: 200px;
       overflow-x: scroll;
       scroll-behavior: smooth;
-      &::before {
-        content: '';
-        width: 2px;
-        border-radius: 2px;
-        height: 36px;
-        background-color: #5284a8;
-        position: absolute;
-        left: -20px;
-        top: 9px;
-      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -100,19 +74,8 @@
     }
   }
 
-  .gu-list {
-    button {
-      margin-right: 40px;
-    }
-
-    &.is-active {
-      button {
-        color: #5284a8;
-        background-color: snow;
-        border: 2px solid #5284a8;
-        font-weight: 700;
-      }
-    }
+  .is-shown {
+    display: block;
   }
 }
 
@@ -122,36 +85,8 @@
     overflow: auto;
   }
 
-  .filter-list {
-    display: flex;
-  }
-
-  .filter-item {
-    margin-right: 10px;
-  }
-
-  .filter-item button {
-    display: block;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-    width: 72px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    height: 36px;
-    border-radius: 56px;
-    background-color: #5284a8;
+  .filter-button {
+    min-width: 72px;
     font-size: 14px;
-    color: black;
-    cursor: pointer;
-    transition: all 350ms ease-in-out;
-    border: 2px solid #5284a8;
-  }
-
-  .filter-item button:hover {
-    color: #5284a8;
-    background-color: snow;
-    border: 2px solid #5284a8;
   }
 }
