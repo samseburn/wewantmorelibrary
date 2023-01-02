@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // 작은도서관 API 호출 URL
 const LIBRARY_URL =
   'http://openapi.seoul.go.kr:8088/6b587a74743930733439484a534456/json/SeoulSmallLibraryInfo/1/1000/';
@@ -164,12 +166,16 @@ function createMarker(arr, i) {
       <span class="popup-code">${arr[i].code}</span>
       </div>
       <p class="popup-desc">
-      주소: ${arr[i].address} <br />
-      ${arr[i].time} <br />
+        <strong>주소</strong><br />
+        ${arr[i].address}
+      </p>
+      <p class="popup-desc">
+        <strong>운영시간</strong><br />
+        ${arr[i].time}
       </p>
     `
     )
-    .setMaxWidth('300px');
+    .setMaxWidth('500px');
 
   // create the marker
   new mapboxgl.Marker(el)
@@ -226,10 +232,15 @@ function makeSidebarList(positions, code) {
       const li = document.createElement('li');
       li.classList.add('sidebar-item');
       li.innerHTML = `
-        <h3>${positions[i].title}</h3>
-        <p>휴관중</p>
-        <p><span>주소: </span>${positions[i].address}</p>
-        <p><span>운영시간</span>${positions[i].time}</p>
+        <h3 class="sidebar-item-title">${positions[i].title}</h3>
+        <p class="sidebar-item-desc">
+          <strong>주소</strong>
+          ${positions[i].address}
+        </p>
+        <p class="sidebar-item-desc">
+          <strong>운영시간</strong>
+          ${positions[i].time}
+        </p>
       `;
       sidebarList.append(li);
     }

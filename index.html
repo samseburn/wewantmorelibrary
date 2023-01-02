@@ -25,14 +25,15 @@
     <script defer src="./scripts/sidebar.js"></script>
   </head>
   <body>
-    <div id="map"></div>
     <aside class="filter">
       <ul class="filter-category">
         <li class="filter-category-item all">
-          <button type="button" data-id="전체">전체</button>
+          <button type="button" class="filter-button" data-id="전체">
+            전체
+          </button>
         </li>
         <li class="filter-category-item gu-list">
-          <button type="button">구별보기</button>
+          <button type="button" class="filter-button">구별보기</button>
         </li>
       </ul>
       <div class="filter-list">
@@ -160,6 +161,8 @@
         </ul>
       </div>
     </aside>
+
+    <div id="map"></div>
 
     <button type="button" class="sidebar-open-button"><span>+</span></button>
     <aside class="sidebar">
