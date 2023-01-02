@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // 사이드바 토글 기능
 const sidebar = document.querySelector('.sidebar');
 const sidebarOpenBtn = document.querySelector('.sidebar-open-button');
